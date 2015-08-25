@@ -1,9 +1,9 @@
-package vlag;
+package h04;
 import java.awt.*;
 import java.applet.*;
 
 @SuppressWarnings("serial")
-public class Show extends Applet {
+public class Vlag extends Applet {
 
   public void init() {
   }
