@@ -15,6 +15,5 @@ public class Show extends Applet {
     int[] yPoints = {100,200,200};
     g.drawPolygon(xPoints, yPoints, 3);
 
-
   }
 }
