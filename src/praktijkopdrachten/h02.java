@@ -5,7 +5,7 @@ import java.awt.Color;
 import java.awt.Graphics;
 
 @SuppressWarnings("serial")
-public class Show extends Applet{
+public class h02 extends Applet{
     Color opvulkleur;
     Color lijnkleur;
     int breedte;
