@@ -50,7 +50,7 @@ public void paint (Graphics g) {
 	g.drawString("valerie", 105, 260);
 	g.setColor(Color.black);
 	g.fillRect(80, 265, 20, 20);
-	g.drawString("jack", 105, 275);
+	g.drawString("jeroen", 105, 275);
 	g.setColor(Color.blue);
 	g.fillRect(80, 290, 20, 20);
 	g.drawString("hans", 105, 300);
