@@ -6,8 +6,8 @@ import java.applet.*;
 @SuppressWarnings("serial")
 public class opdracht6_1 extends Applet {
     double a, b, c, uitkomst;
-	
-	
+    
+    
     public void init() {
         a = 113;
         c = 4;

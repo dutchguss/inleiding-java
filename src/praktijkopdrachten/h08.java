@@ -8,10 +8,6 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
-/**
- *
- * @author ACHCHUTHAN
- */
 public class h08 extends JApplet implements ActionListener {
 
     public h08() {

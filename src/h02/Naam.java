@@ -3,16 +3,14 @@ import java.awt.*;
 import java.applet.*;
 
 @SuppressWarnings("serial")
-public class test extends Applet{
+public class Naam extends Applet{
 
 	public void init() {
-		setBackground(Color.yellow);
+		setBackground(Color.blue);
 	}
 	public void paint(Graphics g) {
-	    g.setColor(Color.blue);
+	    g.setColor(Color.yellow);
 	    g.drawString("mitchel", 50, 60 );
-	    g.setColor(Color.red);
-	    g.drawString("van vliet", 60, 70);
 	   
 
 	    }

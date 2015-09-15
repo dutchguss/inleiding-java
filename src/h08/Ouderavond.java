@@ -15,7 +15,7 @@ public class Ouderavond extends Applet {
   int mannen;
   int vrouwen;
   int volwassenmannen;
-  int volwassenvrouwen;
+  int totaal;
   Button moeders;
   Button vaders;
   Button minmannen;
@@ -24,7 +24,7 @@ public class Ouderavond extends Applet {
   
 	
     public void init() {
-    	setSize(500, 500);
+    	setSize(1920, 953);
     	label = new Label ();
     	add(label);
     	Mannen = new Button();
@@ -71,33 +71,33 @@ public class Ouderavond extends Applet {
     public void paint(Graphics g) {
      g.drawString("aantal mannen"+ mannen+"" , 100, 100);
      g.drawString("aantal vrouwen" + vrouwen+"", 100, 110);
+     g.drawString("totaal:"+ totaal, 100, 120);
     }
     class KnopListener1 implements ActionListener {
         public void actionPerformed( ActionEvent e ) {
         	mannen++;
+        	totaal++;
             repaint();
-            
-         
-            
-            
-            
         }
     }
     class KnopListener2 implements ActionListener {
         public void actionPerformed( ActionEvent e ) {
         	vrouwen++;
+        	totaal++;
             repaint();
         }
 }
     class KnopListener3 implements ActionListener {
         public void actionPerformed( ActionEvent e ) {
         	mannen--;
+        	totaal--;
             repaint();
 }
     }
     class KnopListener4 implements ActionListener {
         public void actionPerformed( ActionEvent e ) {
         	vrouwen--;
+        	totaal--;
             repaint();
 }
     }
