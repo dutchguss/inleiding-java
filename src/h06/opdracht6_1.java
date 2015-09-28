@@ -15,6 +15,9 @@ public class opdracht6_1 extends Applet {
     }
 
     public void paint(Graphics g) {
-        g.drawString("De uitkomst is: " + uitkomst, 20, 20);
+        g.drawString("Jan " + uitkomst, 20, 20);
+        g.drawString("Ali " + uitkomst, 20, 30);
+        g.drawString("Jeannette " + uitkomst, 20, 40);
+        g.drawString("jij " + uitkomst, 20, 50);
     }
 }

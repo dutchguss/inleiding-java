@@ -5,7 +5,7 @@ import java.applet.*;
 
 @SuppressWarnings("serial")
 public class opdracht63 extends Applet {
-    int a, b, c, d, e, uitkomst;
+    int a, b, c, uitkomst;
 	
 	
     public void init() {

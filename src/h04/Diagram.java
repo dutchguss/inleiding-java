@@ -47,12 +47,12 @@ public void paint (Graphics g) {
 	g.fillRect(150, 220-h, hoogte, h);
 	g.setColor(Color.pink);
 	g.fillRect(80, 240, 20, 20);
-	g.drawString("valerie", 105, 260);
+	g.drawString("valerie", 105, 257);
 	g.setColor(Color.black);
 	g.fillRect(80, 265, 20, 20);
-	g.drawString("jeroen", 105, 275);
+	g.drawString("jeroen", 105, 279);
 	g.setColor(Color.blue);
 	g.fillRect(80, 290, 20, 20);
-	g.drawString("hans", 105, 300);
+	g.drawString("hans", 105, 304);
 }
 }

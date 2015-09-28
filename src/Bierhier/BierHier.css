@@ -1,0 +1,79 @@
+
+h1 {
+	font-size: trebuchet, sans-serif, bold;
+  font-size: 2em;
+  font-weight: bold;
+  color: #777777;
+  margin: 40px 0px 70px;
+  text-align: center;
+}
+
+.sendButton {
+  display: block;
+  font-size: 16pt;
+}
+
+/** Most GWT widgets already have a style name defined */
+.gwt-DialogBox {
+  width: 400px;
+}
+
+.dialogVPanel {
+  margin: 5px;
+}
+
+.serverResponseLabelError {
+  color: red;
+}
+
+/** Set ids using widget.getElement().setId("idOfElement") */
+#closeButton {
+  margin: 15px 6px 6px;
+}
+nav ul li
+{
+ display:inline;
+ list-style:none;
+ margin:auto;
+}
+
+nav ul li a
+{
+ color:black;
+ background-color:#04B4AE;
+ border-radius:12px 20px;
+ font-family: trebuchet, sans-serif, bold;
+ padding-left:12px;
+ padding-right:12px;
+ padding:8px;
+ text-decoration:none;
+}
+
+nav ul li a:visited
+{
+ color:black;
+}
+
+nav ul li a:hover
+{
+ background-color:white;
+}
+nav ul
+{
+ background-color:blue;
+ border-radius:12px 24px;
+ padding:20px;
+ width:99%;
+ margin-right:0px;
+ margin-left:-10px;
+}
+p{
+	font-size: 25px;
+	
+}
+img {
+	width: 1%;
+	height: 3%;
+	
+	
+}

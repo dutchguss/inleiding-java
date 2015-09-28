@@ -40,6 +40,13 @@ TextField textvak;
     public void paint(Graphics g) {
      g.drawString(tekst, 100, 100);
     }
+    
+    class VakListener implements ActionListener {
+        public void actionPerformed( ActionEvent e ) {
+            tekst = textvak.getText();
+            String tekst;
+        }
+    }
     class KnopListener1 implements ActionListener {
         public void actionPerformed( ActionEvent e ) {
         	tekst = textvak.getText();
