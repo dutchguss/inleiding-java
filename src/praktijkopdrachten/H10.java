@@ -5,68 +5,60 @@ import java.applet.*;
 import java.awt.event.*;
 
 
-@SuppressWarnings("serial")
-public class H10 extends Applet {		
-
-    int leeftijd;
+public class H10 extends Applet {
     TextField tekstvak;
-    Label label;
-    String tekst;
-    Button ok;
+    Label label;				
+    String s, tekst;
+    int dag;
 	
     public void init() {
-        tekstvak = new TextField("", 5);
-        tekstvak.addActionListener( new VakListener() );
+        tekstvak = new TextField("", 20);
+        label = new Label("Type het cijfer en druk op enter");
+        tekstvak.addActionListener( new TekstvakListener() );
         tekst = "";
-		
-        label = new Label("Geef uw leeftijd in en druk op enter" );
-		
-        add( label );
-        add( tekstvak );
+        add(label);
+        add(tekstvak);
     }
 
     public void paint(Graphics g) {
-        g.drawString(tekst, 50, 45 );
+        g.drawString(tekst, 50, 60 );
     }
 	
-    class VakListener implements ActionListener {
-        public void actionPerformed( ActionEvent e ) {
-            String s;
-			
+    class TekstvakListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
             s = tekstvak.getText();
-            leeftijd = Integer.parseInt( s );
-            if ( leeftijd < 3.1 ) {
-                tekst = "dit is slecht.";
-                repaint();
+            dag = Integer.parseInt( s);
+            switch(dag) {
+            case 1:  tekst = "1 = slecht";
+            break;
+            case 2: tekst = "2 = slecht";
+            break;
+            case 3: tekst = "3 = slecht";
+            break;
+            case 4: tekst = "4 = onvoldoende";
+            break;
+            case 5: tekst = "5 = matig";
+            break;
+            case 6:
+                    tekst = "6 = voldoende";
+                    break;
+                case 7:
+                    tekst = "7 = voldoende";
+                    break;
+                case 8:
+                    tekst = "8 = goed";
+                    break;
+                case 9:
+                    tekst = "9 = goed";
+                    break;
+                case 10:
+                    tekst = "10 = goed";
+                    break;
+                default:
+                    tekst = "U hebt een verkeerd nummer ingetikt ..!";
+                    break;
             }
-            if (leeftijd > 3.9){
-                tekst = "dit is onvoldoende";
-            
             repaint();
         }
-    if (leeftijd > 4.9){
-    tekst = "dit is matig";
-
-repaint();}
-
-if (leeftijd >5.9){
-	tekst = "dit is voldoende";
-	repaint();
-}
-if (leeftijd > 7.9);
-tekst = "dit is goed";
-
-repaint();}
-    else {
-    	tekst = "u heeft geen geldig nummer ingevoerd";
     }
-    repaint();
- 
-    class knopListener implements ActionListener {
-        public void actionPerformed( ActionEvent e ) {
-        	tekst = ("");
-        	tekst = tekstvak.getText();
-        }
-}
-}
 }

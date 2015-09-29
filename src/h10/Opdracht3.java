@@ -60,6 +60,7 @@ public class Opdracht3 extends Applet {
                 case 12:
                     tekst = "december 31 dagen";
                     break;
+                
                 default:
                     tekst = "U hebt een verkeerd nummer ingetikt ..!";
                     break;
