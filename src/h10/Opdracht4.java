@@ -8,21 +8,27 @@ import java.awt.event.*;
 public class Opdracht4 extends Applet {
     TextField tekstvak;
     Label label;				
-    String s, tekst;
+    String s, tekst, tekst2;
     int dag;
     int jaar;
+    TextField tekstvakjaar;
 	
     public void init() {
+    	tekstvakjaar = new TextField("", 40);
         tekstvak = new TextField("", 20);
         label = new Label("Type het maandnummer en druk op enter");
         tekstvak.addActionListener( new TekstvakListener() );
         tekst = "";
+        tekst2 = "";
         add(label);
         add(tekstvak);
+        tekstvakjaar.addActionListener( new Jaarlistener() );
+        add(tekstvakjaar);
     }
 
     public void paint(Graphics g) {
         g.drawString(tekst, 50, 60 );
+        g.drawString(tekst2, 50, 75);
     }
 	
     class TekstvakListener implements ActionListener {
@@ -64,50 +70,60 @@ public class Opdracht4 extends Applet {
                     break;
         default:
             tekst = "u heeft niet het juiste getal ingevuld";
-            break;}
+            break;
+   
+            }
+        }
+    }
+            class Jaarlistener implements ActionListener {
+                public void actionPerformed(ActionEvent e) {
+                	tekst2 = tekstvakjaar.getText();
+                	jaar = Integer.parseInt(s);
                     switch(jaar){
                 case 2000:
-                	tekst = "dit is een schrikkeljaar";
+                	tekst2 = "dit is een schrikkeljaar"
+                			+ "  januari 31  februari 29  maart31 april 30 mei 31 juni 30 juli 31 augustus 31 september 30 oktober 31 decembers ";
                 case 2004:
-                	tekst = "dit is een schrikkeljaar";
+                	tekst2 = "dit is een schrikkeljaar"+
+                	"januari 31  februari 29  maart31 april 30 mei 31 juni 30 juli 31 augustus 31 september 30 oktober 31 decembers ";
                 	break;
                 case 2008:
-                	tekst = "dit is een schrikkeljaar";
+                	tekst2 = "dit is een schrikkeljaar"+ "januari 31  februari 29  maart31 april 30 mei 31 juni 30 juli 31 augustus 31 september 30 oktober 31 decembers ";
                 	break;
                 case 2012:
-                	tekst = "dit is een schrikkeljaar";
+                	tekst2 = "dit is een schrikkeljaar"+ "januari 31  februari 29  maart31 april 30 mei 31 juni 30 juli 31 augustus 31 september 30 oktober 31 decembers ";
                 	break;
                 case 2016:
-                	tekst = "dit is een schrikkeljaar";
+                	tekst2 = "dit is een schrikkeljaar"+ "januari 31  februari 29  maart31 april 30 mei 31 juni 30 juli 31 augustus 31 september 30 oktober 31 decembers ";
                 	break;
                 case 2020:
-                	tekst = "dit is een schrikkeljaar";
+                	tekst2 = "dit is een schrikkeljaar"+ "januari 31  februari 29  maart31 april 30 mei 31 juni 30 juli 31 augustus 31 september 30 oktober 31 decembers ";
                 	break;
                case 2024:
-                	tekst = "dit is een schrikkeljaar";
+                	tekst2 = "dit is een schrikkeljaar"+ "januari 31  februari 29  maart31 april 30 mei 31 juni 30 juli 31 augustus 31 september 30 oktober 31 decembers ";
                 	break;
                 case 2028:
-                	tekst = "dit is een schrikkeljaar";
+                	tekst2 = "dit is een schrikkeljaar"+ "januari 31  februari 29  maart31 april 30 mei 31 juni 30 juli 31 augustus 31 september 30 oktober 31 decembers ";
                 	break;
                 case 2032:
-                	tekst = "dit is een schrikkeljaar";
+                	tekst2 = "dit is een schrikkeljaar"+ "januari 31  februari 29  maart31 april 30 mei 31 juni 30 juli 31 augustus 31 september 30 oktober 31 decembers ";
                 	break;
                 case 2036:
-                	tekst = "dit is een schrikkeljaar";
+                	tekst2 = "dit is een schrikkeljaar"+ "januari 31  februari 29  maart31 april 30 mei 31 juni 30 juli 31 augustus 31 september 30 oktober 31 decembers ";
                 	break;
                case 2040:
-                	tekst = "dit is een schrikkeljaar";
+                	tekst2 = "dit is een schrikkeljaar"+ "januari 31  februari 29  maart31 april 30 mei 31 juni 30 juli 31 augustus 31 september 30 oktober 31 decembers ";
                 	break;
                 case 2044:
-                	tekst = "dit is een schrikkeljaar";
+                	tekst2 = "dit is een schrikkeljaar"+ "januari 31  februari 29  maart31 april 30 mei 31 juni 30 juli 31 augustus 31 september 30 oktober 31 decembers ";
                 	break;
                 case 2048:
-                	tekst = "dit is een schrikkeljaar";
+                	tekst2 = "dit is een schrikkeljaar"+ "januari 31  februari 29  maart31 april 30 mei 31 juni 30 juli 31 augustus 31 september 30 oktober 31 decembers ";
                 	break;
                 case 2052:
-                	tekst = "dit is een schrikkeljaar";
+                	tekst2 = "dit is een schrikkeljaar"+ "januari 31  februari 29  maart31 april 30 mei 31 juni 30 juli 31 augustus 31 september 30 oktober 31 decembers ";
                 default:
-                    tekst = "dit is geen scrikkeljaar";
+                    tekst2 = "dit is geen scrikkeljaar"+ "januari 31  februari 28  maart31 april 30 mei 31 juni 30 juli 31 augustus 31 september 30 oktober 31 decembers ";
                     break;
             
                     }
@@ -115,4 +131,6 @@ public class Opdracht4 extends Applet {
         }
     }
 }
+    
+
 

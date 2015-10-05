@@ -8,7 +8,7 @@ import java.awt.event.*;
 @SuppressWarnings("serial")
 public class Opdracht5 extends Applet {		
 
-    int leeftijd;
+    int cijfer;
     TextField tekstvak;
     Label label;
     String tekst;
@@ -23,10 +23,6 @@ public class Opdracht5 extends Applet {
 		
         add( label );
         add( tekstvak );
-        knopListener kl = new knopListener();
-    	ok.addActionListener(kl);
-        ok.setLabel( "ok" );
-        add(ok);
     }
 
     public void paint(Graphics g) {
@@ -38,8 +34,8 @@ public class Opdracht5 extends Applet {
             String s;
 			
             s = tekstvak.getText();
-            leeftijd = Integer.parseInt( s );
-            if ( leeftijd > 5.4 ) {
+            cijfer = Integer.parseInt( s );
+            if ( cijfer > 5.4 ) {
                 tekst = "dit is voldoende.";
                 repaint();
             }

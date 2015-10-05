@@ -65,6 +65,7 @@ public class Opdracht3 extends Applet {
                     tekst = "U hebt een verkeerd nummer ingetikt ..!";
                     break;
             }
+            tekstvak.setText(null);
             repaint();
         }
     }
