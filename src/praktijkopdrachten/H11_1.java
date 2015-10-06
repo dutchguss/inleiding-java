@@ -8,7 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-public class H11 extends Applet{
+public class H11_1 extends Applet{
 TextField tafels;
 int i, keer, tafel,tafel1;
 Button ok;
@@ -48,6 +48,7 @@ tafel+= 1;
 class Tekstvaklistener implements ActionListener{
 	public void actionPerformed  (ActionEvent e){
         tafel1 = Integer.parseInt( tafels.getText() );
+        tafels.setText("");
         repaint();
     }
 }
