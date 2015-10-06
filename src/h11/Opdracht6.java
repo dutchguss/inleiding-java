@@ -14,11 +14,15 @@ public class Opdracht6 extends Applet {
 		int i = 0;
 		int x = 50;
 		int y = 50;
+		int width = 10;
+		int height = 10;
 		while (i < 6){
 			
-			g.drawRect(x, y, 30, 30);
-			y += 30;
-			x += 30;
+			g.drawOval(x, y, width, height);
+			width += 10;
+			x -= 5;
+			y -= 5;
+			height += 10;
 			i++;
 		
 		
