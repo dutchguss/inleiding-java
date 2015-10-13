@@ -8,27 +8,19 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
-@SuppressWarnings("serial")
-public class H11_1 extends Applet{
-TextField tafels;
+public class H11_2 extends Applet{
 int i, keer, tafel,tafel1;
 Button ok;
 
 	public void init(){
-		tafels = new TextField();
-		tafels.addActionListener( new Tekstvaklistener() );
-		add(tafels);
-		ok = new Button("ok");
+		ok = new Button("volgende tafel");
 		ok.addActionListener(new Tekstvaklistener());
 		add(ok);
 	}
 	public void paint(Graphics g){
 		int x = 10;
 		int y = 10;
-		tafel = 1;
-	
-
-			keer = (tafel1 *tafel);
+		
 			g.drawString("1x"+keer+"="+ keer*1, x, y);
 			g.drawString("2x"+keer+"="+ keer*2, x, y+10);
 			g.drawString("3x"+keer+"="+ keer*3, x, y+20);
@@ -39,17 +31,14 @@ Button ok;
 			g.drawString("8x"+keer+"="+ keer*8, x, y+70);
 			g.drawString("9x"+keer+"="+ keer*9, x, y+80);
 			g.drawString("10x"+keer+"="+ keer*10, x, y+90);
-			
-tafel+= 1;
-	i++;
+
 			
 }			
 	
 
 class Tekstvaklistener implements ActionListener{
 	public void actionPerformed  (ActionEvent e){
-        tafel1 = Integer.parseInt( tafels.getText() );
-        tafels.setText("");
+        keer++;
         repaint();
     }
 }
