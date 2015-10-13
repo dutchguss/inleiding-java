@@ -1,59 +1,109 @@
 package praktijkopdrachten;
 
+
+
+
 import java.applet.Applet;
+
 import java.awt.Button;
+
 import java.awt.Graphics;
+
 import java.awt.TextField;
+
 import java.awt.event.ActionEvent;
+
 import java.awt.event.ActionListener;
 
 
-@SuppressWarnings("serial")
-public class H11_1 extends Applet{
-TextField tafels;
-int i, keer, tafel,tafel1;
-Button ok;
 
-	public void init(){
-		tafels = new TextField();
-		tafels.addActionListener( new Tekstvaklistener() );
-		add(tafels);
-		ok = new Button("ok");
-		ok.addActionListener(new Tekstvaklistener());
-		add(ok);
-	}
-	public void paint(Graphics g){
-		int x = 10;
-		int y = 10;
-		tafel = 1;
+
+
+
+
+
+
+
+public class H11_1 extends Applet
+
+{
+
+	int tafelinput;
+
+	int i, x, y;
+
+	TextField vak1;
+
 	
 
-			keer = (tafel1 *tafel);
-			g.drawString("1x"+keer+"="+ keer*1, x, y);
-			g.drawString("2x"+keer+"="+ keer*2, x, y+10);
-			g.drawString("3x"+keer+"="+ keer*3, x, y+20);
-			g.drawString("4x"+keer+"="+ keer*4, x, y+30);
-			g.drawString("5x"+keer+"="+ keer*5, x, y+40);
-			g.drawString("6x"+keer+"="+ keer*6, x, y+50);
-			g.drawString("7x"+keer+"="+ keer*7, x, y+60);
-			g.drawString("8x"+keer+"="+ keer*8, x, y+70);
-			g.drawString("9x"+keer+"="+ keer*9, x, y+80);
-			g.drawString("10x"+keer+"="+ keer*10, x, y+90);
-			
-tafel+= 1;
-	i++;
-			
-}			
-	
+	public void init()
 
-class Tekstvaklistener implements ActionListener{
-	public void actionPerformed  (ActionEvent e){
-        tafel1 = Integer.parseInt( tafels.getText() );
-        tafels.setText("");
-        repaint();
-    }
-}
-}
+	{
+
+		setSize(300,500);
+
+		tafelinput = 0;
+
+		vak1 = new TextField();
+
+		vak1.setSize(300, 500);
+
+		Listen1 l1 = new Listen1();
+
+		vak1.addActionListener(l1);
+
+		add (vak1);
 
 		
 
+	}
+
+	public void paint(Graphics g)
+
+	{
+
+		 x = 60;
+
+		 y = 60;
+
+	 if (tafelinput>0)
+
+	{
+
+		for(i = 0; i<10;)
+
+		{
+
+			y = y+20;
+
+			i++;
+
+			g.drawString(i+"x"+tafelinput+"="+tafelinput*i, x, y);
+
+		}
+
+	 }
+
+	 vak1.setSize(50, 50);
+
+	}
+
+	class Listen1 implements ActionListener
+
+	{
+
+		public void actionPerformed(ActionEvent e)
+
+		{
+
+			tafelinput=(Integer.parseInt(vak1.getText()));
+
+			vak1.setText("");
+
+			repaint();
+
+		}
+
+	}
+
+}
