@@ -25,6 +25,7 @@ public class Btw extends Applet {
 
     public void paint(Graphics g) {
         g.drawString("Het getal is " + getal*Btw, 50, 60 );
+        
     }
 	
     	class TekstvakListener implements ActionListener{

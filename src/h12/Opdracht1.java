@@ -6,7 +6,8 @@ import java.applet.*;
 public class Opdracht1 extends Applet  {
     int[] salaris;
     int[] kopie;
-	
+    int gemiddelde;
+	double salaris2;
     public void init() {
         salaris = new int[10];
         kopie = new int[5];
@@ -19,14 +20,14 @@ public class Opdracht1 extends Applet  {
 
     public void paint(Graphics g) {
         for (int teller = 0; teller < salaris.length; teller ++) {
-        	int salaris2 = salaris[teller] / 10;
-        	int y = 10;
+        	gemiddelde += salaris[teller];
+        	salaris2 = gemiddelde / 10;
+
             g.drawString("" + salaris[teller], 100, 20 * teller + 20);
-            g.drawString(""+salaris2, 10, y);
-            y += 10;
-            y++;
+            
+            
         }
-        
+        g.drawString(""+salaris2, 10, 20);
         	
         }
        
